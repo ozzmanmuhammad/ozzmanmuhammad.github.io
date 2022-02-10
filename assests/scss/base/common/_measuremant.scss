@@ -1,0 +1,132 @@
+
+/*Customize Bootstrap Container*/
+@media (min-width: 576px) {
+    .container-sm, .container {
+      max-width: 540px;
+    }
+  }
+  @media (min-width: 768px) {
+    .container-md, .container-sm, .container {
+      max-width: 720px;
+    }
+  }
+  @media (min-width: 992px) {
+    .container-lg, .container-md, .container-sm, .container {
+      max-width: 960px;
+    }
+  }
+  @media (min-width: 1200px) {
+    .container-xl, .container-lg, .container-md, .container-sm, .container {
+      max-width: 1170px;
+    }
+  }
+
+
+/*Icon Space*/
+.icon-space-left{
+    i{
+        padding-left: 10px;
+    }
+}
+.icon-space-right{
+    i{
+        padding-right: 10px;
+    }
+}
+
+.pos-relative{
+    position: relative;
+}
+
+.pos-absolute{
+    position: absolute;
+}
+
+
+.inner-shape{
+    transform: scale(.85);
+    transition: $transition-base;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.inner-shape-top-right{
+    position: absolute;
+    width: 345px;
+    height: 345px;
+    border-radius: 50%;
+    border: 1px solid rgba($white, .05);
+    top: -230px;
+    right: -230px;
+
+    &::before{
+        position: absolute;
+        content: "";
+        width: 400px;
+        height: 400px;
+        border-radius: 50%;
+        border: 1px solid rgba($white, .05);
+        top: -20px;
+        right: -20px;
+    }
+
+    &::after{
+        position: absolute;
+        content: "";
+        width: 460px;
+        height: 460px;
+        border-radius: 50%;
+        border: 1px solid rgba($white, .05);
+        top: -40px;
+        right: -40px
+    }
+}
+
+
+/*Default Inner Shape*/
+.inner-shape-bottom-right{
+    position: absolute;
+    width: 345px;
+    height: 345px;
+    border-radius: 50%;
+    border: 1px solid rgba($white, .05);
+    bottom: -230px;
+    right: -230px;
+
+    &::before{
+        position: absolute;
+        content: "";
+        width: 400px;
+        height: 400px;
+        border-radius: 50%;
+        border: 1px solid rgba($white, .05);
+        bottom: -20px;
+        right: -20px;
+    }
+
+    &::after{
+        position: absolute;
+        content: "";
+        width: 460px;
+        height: 460px;
+        border-radius: 50%;
+        border: 1px solid rgba($white, .05);
+        bottom: -40px;
+        right: -40px
+    }
+}
+
+.mb-n5{
+    margin-bottom: -3rem;
+}
+.mb-5{
+    margin-bottom: 3rem;
+}
+.mb-n6{
+    margin-bottom: -25px;
+}
+.mb-6{
+    margin-bottom: 25px;
+}
+
+

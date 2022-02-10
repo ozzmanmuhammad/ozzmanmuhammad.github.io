@@ -1,0 +1,138 @@
+/************************************
+* Component - Resume Display
+************************************/
+.resume-tab{
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+    @include breakpoint(large){
+        margin-bottom: 80px;
+    }
+    @include breakpoint(large){
+        margin-bottom: 100px;
+    }
+    .nav-item{
+        width: 100%;
+        margin-bottom: 35px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+        @include breakpoint(small){
+            width: calc(50% - 17.5px);
+            margin-right: 35px;
+            margin-bottom: 0;
+        }
+
+        &:last-child{
+            margin-right: 0;
+        }
+        button{
+            background: $color-dark-blue;
+            border: 1px solid rgba($white, .1);
+            font-size: 36px;
+            font-family: $heading-font;
+            color: $white;
+            display: block;
+            width: 100%;
+            @include breakpoint(small){
+                font-size: 40px;
+            }
+            @include breakpoint(medium){
+                font-size: 45px;
+            }
+            @include breakpoint(large){
+                font-size: 50px;
+            }
+            @include breakpoint(xlarge){
+                font-size: 58px;
+            }
+            &.active{
+                border-color: $color-gray-blue;
+                background: $color-gray-blue;
+            }
+        }
+    }
+    
+}
+
+.resume-tab-list-single-item{
+    &:last-child > .content > .right {
+       margin-bottom: 0;
+    }
+    @include breakpoint(large){
+        &:first-child > .content > .left {
+            border-top: 1px solid rgba($white, .1);
+        }
+        &:last-child > .content > .left {
+            border-bottom: 1px solid rgba($white, .1);
+        }
+    }
+
+    .content{
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+
+        @include breakpoint(large){
+            align-items: center;
+            flex-direction: row;
+        }
+    }
+
+    .left{
+       width: 100%;
+       position: relative;
+       border: 1px solid rgba($white, .1);
+       padding: 25px;
+       margin-bottom: 30px;
+        @include breakpoint(large){
+            border-left: 1px solid rgba($white, .1);
+            border-right: 1px solid rgba($white, .1);
+            border-top: none;
+            border-bottom: none;
+            padding: 125px 30px 125px 170px;
+            margin-right: 80px;
+            width: 300px;
+            margin-bottom: 0;
+        }
+        @include breakpoint(xlarge){
+            padding: 103px 30px 105px 170px;
+            margin-right: 100px;
+        }
+        &::after{
+            position: absolute;
+            content: "";
+            height: 50px;
+            width: 1px;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            background: $white;
+        }
+        .year{
+            display: block;
+        }
+    }
+
+    .right{
+        margin-bottom: 60px;
+        width: 100%;
+        @include breakpoint(large){
+            width: calc(100% - 400px);
+            margin-bottom: 35px;
+
+        }
+        .title{
+            font-size: 35px;
+            font-weight: 600;
+            margin-bottom: 25px;
+        }
+
+        p{
+            &:last-child{
+                margin-top: 25px;
+                margin-bottom: 0;
+            }
+        }
+    }
+}

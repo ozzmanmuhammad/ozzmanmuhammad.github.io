@@ -1,0 +1,121 @@
+/************************************
+* Component - Testimonial Display
+************************************/
+.testimonial-display-box{
+    .default-nav-style {
+        z-index: 9;
+        @include breakpoint(xlarge){
+            position: absolute;
+            bottom: 44px;
+            transform: translateX(-50%);
+            left: calc(50% - 150px);
+        }
+        @include breakpoint(xxlarge){
+            left: calc(50% - 170px);
+        }
+        @include breakpoint(xxxlarge){
+            left: calc(50% - 190px);
+        }
+    }
+}
+
+.testimonial-display-slider{
+    
+    .swiper-container{
+        overflow: visible;
+    }
+    .swiper-slide-active{
+        bottom: 0;
+        
+        @include breakpoint(xlarge){
+            bottom: 230px;
+        }
+    }
+}
+
+.testimonial-slider-single-item{
+    background: #282a37;
+    padding: 100px 45px 45px 45px;
+    overflow: hidden;
+    position: relative;
+
+    @include breakpoint(medium){
+        padding: 165px 55px 70px 55px;
+    }
+    .icon{
+        position: absolute;
+        font-family: $heading-font;
+        font-size: 185px;
+        top: 0px;
+        left: 45px;
+        line-height: 1;
+        @include breakpoint(medium){
+            left: 55px;
+            top: 60px;
+        }
+    }
+    .text{
+         font-size: 28px;
+         font-family: $heading-font;
+         font-weight: 600;
+         color: $white;
+
+         @include breakpoint(medium){
+            font-size: 32px
+         }
+    }
+
+    .info {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-direction: column;
+
+        @include breakpoint(medium){
+            flex-direction: row;
+            align-items: center;
+        }
+    }
+
+    .name{
+        font-size: 25px;
+        font-weight: 500;
+        font-family: $body-font;
+        margin-top: 5px;
+        margin-bottom: 20px;
+    }
+
+    .designation{
+        display: inline-block;
+        font-weight: 300;
+    }
+
+    .review{
+        display: inline-flex;
+        margin-top: 20px;
+        @include breakpoint(medium){
+            margin-top: 0;
+        }
+        li{
+            margin-right: 10px;
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+
+        .fill{
+            color: #ffa200;
+        }
+
+        .blank{
+            color: #828282;
+        }
+
+    }
+
+    &:hover .inner-shape{
+        transform: scale(1);
+        visibility: visible;
+        opacity: 1;
+    }
+}

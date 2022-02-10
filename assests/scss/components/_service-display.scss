@@ -1,0 +1,128 @@
+/*****************************
+* Component - Service Display
+*****************************/
+
+.service-display-wrapper{
+   position: relative;
+   padding-bottom: 40px;
+   @include breakpoint(xxxlarge){
+       position: static;
+       padding-bottom: 0px;
+   }
+}
+
+/*Service Slider */
+.service-display-dots{
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+    width: 100%;
+    @include breakpoint(xxxlarge){
+        position: absolute;
+        background: rgba($color-primary, .6);
+        height: 900px;
+        width: 322px;
+        top: 0;
+        right: 0;
+        
+    }
+
+    .swiper-pagination{
+        bottom: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        @include breakpoint(xxxlarge){
+            position: absolute;
+            bottom: 240px;
+        }
+    }
+
+    .swiper-pagination-bullet {
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        background: $white;
+        opacity: 0.09;
+        margin-right: 20px;
+        margin-bottom: 0px;
+        border-radius: 50%;
+        &-active{
+            opacity: 1;
+        }
+        &:last-child{
+            margin-bottom: 0;
+        }
+        &:last-child{
+            margin-right: 0;
+            margin-bottom: 0;
+        }
+
+        @include breakpoint(xxxlarge){
+            display: block;
+            width: 12px;
+            margin-right: 0;
+            margin-bottom: 70px;
+        }
+    }
+}
+
+
+/*Service Box Single Item*/
+.service-box-single-item{
+    position: relative;
+    background: $color-dark-blue;
+    padding: 45px;
+    overflow: hidden;
+    @include breakpoint(medium){
+        padding: 50px;
+    }
+    @include breakpoint(large){
+        padding: 70px;
+    }
+    .icon{
+        width: 56px;
+        height: 56px;
+        margin-bottom: 60px;
+        img{
+            width: 100%;
+        }
+    }
+
+    .title{
+        font-size: 28px;
+        font-family: $body-font;
+        font-weight: 500;
+        margin-bottom: 45px;
+        a{
+            color: $white;
+        }
+    }
+
+    .list-item{
+        li{
+            position: relative;
+            margin-bottom: 15px;
+            display: block;
+            padding-left: 40px;
+            &:last-child{
+                margin-bottom: 0;
+            }
+            &::before{
+                position: absolute;
+                top: 0;
+                left: 0;
+                content: "\ea7c";
+                font-family: "IcoFont";
+            }
+        }
+    }
+
+    &:hover .inner-shape{
+        transform: scale(1);
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+

@@ -1,0 +1,39 @@
+/*****************************
+* Component - Slider
+*****************************/
+
+.default-nav-style{
+	display: flex;
+	.slider-button{
+		width: 45px;
+		height: 45px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 50%;
+		border: 1px solid rgba($white, .1);
+		margin-right: 20px;
+		transition: $transition-base;
+		outline: none;
+		@include breakpoint(medium){
+			width: 55px;
+			height: 55px;
+		}
+		@include breakpoint(large){
+			width: 65px;
+			height: 65px;
+		}
+		@include breakpoint(xlarge){
+			width: 85px;
+			height: 85px;
+		}
+		&:last-child{
+			margin-right: 0;
+		}
+
+		&:hover{
+			background: $white;
+			color: $dark;
+		}
+	}
+}

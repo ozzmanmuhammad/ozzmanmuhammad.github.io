@@ -1,0 +1,99 @@
+/************************************
+* Component - Video Card Display
+************************************/
+
+.video-card{
+    padding: 30px;
+    background: $color-dark-blue;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 276px;
+
+    @include breakpoint(small){
+        height: 336px;
+    }
+
+    @include breakpoint(large){
+        height: 456px;
+    }
+    @include breakpoint(xlarge){
+        height: 463.5px;
+    }
+
+    .btn{
+        margin-top:55px;
+        @include breakpoint(small){
+            margin-top: 65px;
+        }
+        @include breakpoint(medium){
+            margin-top: 75px;
+        }
+        @include breakpoint(large){
+            margin-top: 85px;
+        }
+        @include breakpoint(xlarge){
+            margin-top: 95px;
+        }
+    }
+
+}
+
+.video-info-content{
+    text-align: center;
+    margin-top: 70px;
+
+
+    @include breakpoint(large){
+        margin-top: 0;
+        text-align: left;
+    }
+    .title{
+        font-size: 50px;
+        font-weight: 600;
+        line-height: 1;
+        margin-bottom: 10px;
+
+        @include breakpoint(medium){
+            font-size: 60px;
+        }
+        @include breakpoint(large){
+            font-size: 70px;
+        }
+        @include breakpoint(xxxlarge){
+            font-size: 85px;
+        }
+    }
+
+    .sub-title{
+        font-size: 22px;
+        font-weight: 600;
+        color: $body-color;
+        line-height: 1.5;
+
+        @include breakpoint(small){
+            font-size: 34px;
+        }
+
+        @include breakpoint(large){
+            font-size: 36px;
+        }
+        @include breakpoint(xlarge){
+            font-size: 40px;
+        }
+        @include breakpoint(xxlarge){
+            font-size: 45px;
+        }
+    }
+
+    p{
+        margin-top: 25px;
+
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+}
