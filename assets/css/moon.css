@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+
+
+body{
+    min-height:100vh;
+    overflow-x: hidden;
+}
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    justify-content: space-between;
+    display:flex;
+    align-items: center;
+    z-index: 10000;
+}
+
+header .logo{
+
+    padding-top: 0%;
+    width: 20%;
+    height: 20%;
+    object-fit: scale-down
+
+}
+
+header ul{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+header ul li{
+    list-style: none;
+    margin-left: 2px;
+}
+
+header ul li a{
+    font-weight:bold;
+    font-size:large;
+    text-decoration: none;
+    padding: 10px 25px;
+    color: #fff;
+    border-radius: 20px;
+}
+
+header ul li a:hover,
+header ul li a:active
+{
+    background: #fff;
+    color: #2b1055;
+}
+
+section{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(#2b1055, #7597de);
+    padding: 100px;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    overflow: hidden;
+    
+}
+section::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(to top, #2a2c39,#28283F,#272544,#25214A,#231D4F,#221A55,#20165A, transparent);
+    z-index: 1000;
+}
+section img{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+section img#moon{
+    mix-blend-mode: screen;
+}
+
+section img#mountain_front{
+    z-index: 10;
+}
+
+section img#me{
+    z-index: 11;
+}
+section img#snow{
+    z-index: 11;
+}
+#about{
+    position: absolute;
+    /* right: -350px; */
+    top: 42%;
+    color: #fff;
+    white-space: nowrap;
+    font-family: fantasy;
+ 
+    font-size: 8.5vw;
+    font-style: bold;
+    z-index: 9;
+    
+}
+#btn{
+    text-decoration: none;
+    display:inline-block;
+    padding: 8px 30px;
+    border-radius: 40px;
+    background:#fff;
+    color: #2b1055;
+    font-size: 1.5em;
+    z-index: 9;
+    transform: translateY(100px);
+}
+
+.sec{
+    position: relative;
+    padding: 100px;
+    background: #252734;
+}
+
+.sec h2{
+    font-size: 3.2em;
+    margin-bottom: 10px;
+    color:#fff
+}
+.sec p{
+    font-size: 1em;
+    
+    color:#fff
+}
+.container-card{
+    padding: 50px;
+    position: relative;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  
+}
+.block{
+    position: absolute;
+    width: 50px;
+    height: 100px;
+    background: #1c1d27;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    z-index: 1;
+   
+}
+.section-title2{
+    position: absolute;
+    text-align:center;
+    left:8%;
+    top:270%;
+    z-index:2;
+    font-size: 12vw;
+    line-height:1em;
+    font-weight: 1000;
+    margin-top: 25px;
+    
+}
+@media (min-width: 576px) {
+    .section-title {
+      font-size: 40px;
+    }
+  }
+  @media (min-width: 768px) {
+    .section-title {
+      font-size: 50px;
+    }
+  }
+  @media (min-width: 992px) {
+    .section-title {
+      font-size: 70px;
+    }
+  }
+
+  .title-line{
+    position: absolute;
+    text-align:center;
+    left:12%;
+    top: 800%;
+    z-index:2;
+    font-size: 20px;
+    /* line-height:1em; */
+    font-weight: 10;
+    margin-top: 25px;
+    
+}
+@media (min-width: 576px) {
+    .title-line {
+      font-size: 20px;
+    }
+  }
+  @media (min-width: 768px) {
+    .title-line {
+      font-size: 25px;
+    }
+  }
+  @media (min-width: 992px) {
+    .title-line {
+      font-size: 50px;
+    }
+  }
+
+  .section-tag2 {
+    font-size: 18px;
+    font-weight: 300;
+    position: relative;
+    display: inline-block;
+    padding-left: 27px;
+    z-index: 3;
+  }
+  .section-tag2::before {
+    position: absolute;
+    content: "||";
+    top: 0;
+    left: 0;
+  }
