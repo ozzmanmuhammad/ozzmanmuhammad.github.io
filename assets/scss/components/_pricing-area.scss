@@ -1,0 +1,68 @@
+/************************************
+* Component - Pricing Area
+************************************/
+.pricing-area{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 50px;
+    margin-top: 43px;
+
+    @include breakpoint(xlarge){
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+.pricing-single-item{
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background: $color-dark-blue;
+    padding: 40px 30px;
+
+    @include breakpoint(medium) {
+        padding: 70px 30px;
+    }
+
+    .name{
+        font-size: 30px;
+        font-weight: 600;
+        margin-bottom: 15px;
+
+        @include breakpoint(medium) {
+            margin-bottom: 25px;
+        }
+    }
+
+    .value{
+        font-size: 46px;
+        font-family: $body-font;
+
+        @include breakpoint(medium) {
+            font-size: 58px;
+        }
+    }
+
+    .time{
+        text-align: right;
+        padding-left: 75px;
+        display: inline-block;
+    }
+
+    .list-items{
+        margin-top: 30px;
+        margin-bottom: 30px;
+        li{
+            margin-bottom: 15px;
+        }
+
+        @include breakpoint(medium) {
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+    }
+
+    &:hover .inner-shape{
+        transform: scale(1);
+        visibility: visible;
+        opacity: 1;
+    }
+}

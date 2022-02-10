@@ -1,0 +1,225 @@
+.btn{
+    font-size: 15px;
+    text-align: center;
+    position: relative;
+    z-index: 9;
+    overflow: hidden;
+    color: $white;
+    box-shadow: none !important;
+    outline: none !important;
+
+    &:hover{
+        color: $white;
+    }
+
+    // Button Size
+    &-sm{
+        padding-left: 40px;
+        padding-right: 40px;
+        height: 65px;
+        border-radius: 32.5px;
+        line-height: 60px;
+        
+        &::after{
+            content: "";
+            border-radius: 32.5px;
+        }
+    }
+    &-md{
+        padding-left: 20px;
+        padding-right: 20px;
+        height: 50px;
+        border-radius: 35px;
+        line-height: 35px;
+
+        @include breakpoint(small){
+            padding-left: 40px;
+            padding-right: 40px;
+            height: 60px;
+            line-height: 50px;
+        }
+        @include breakpoint(xlarge){
+            padding-left: 50px;
+            padding-right: 50px;
+            height: 70px;
+            line-height: 60px;
+        }
+
+        &::after{
+            content: "";
+            border-radius: 35px;
+        }
+    }
+    &-lg{
+        border-radius: 32.5px;
+        padding-left: 30px;
+        padding-right: 30px;
+        height: 50px;
+        line-height: 30px;
+        @include breakpoint(small){
+            padding-left: 40px;
+            padding-right: 40px;
+            height: 60px;
+            line-height: 43px;
+        }
+        @include breakpoint(xlarge){
+            padding-left: 60px;
+            padding-right: 60px;
+            height: 65px;
+            line-height: 45px;
+        }
+
+        &::after{
+            content: "";
+            border-radius: 32.5px;
+        }
+    }
+    &-xl{
+        padding-left: 30px;
+        padding-right: 30px;
+        height: 60px;
+        border-radius: 42.5px;
+        line-height: 45px;
+
+        @include breakpoint(small){
+            padding-left: 30px;
+            padding-right: 30px;
+            height: 55px;
+            line-height: 44px;
+        }
+        @include breakpoint(medium){
+            padding-left: 40px;
+            padding-right: 40px;
+            height: 60px;
+            line-height: 50px;
+        }
+        @include breakpoint(xlarge){
+            padding-left: 60px;
+            padding-right: 60px;
+            height: 85px;
+            line-height: 70px;
+        }
+        
+
+        &::after{
+            content: "";
+            border-radius: 42.5px;
+        }
+    }
+
+
+    // Button Style - Fill
+    &-fill-one{
+        background: #2e303d;
+
+        &::after{
+            position: absolute;
+            content: "";
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scaleX(.3);
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            transition: $transition-base;
+            z-index: -1;
+        }
+
+        &:hover{
+            border: 1px solid #3b3d49;
+            &::after{
+                transform: translate(-50%, -50%) scaleX(1.2);
+                background: #3b3d49;
+            }
+        }
+    }
+
+
+    // Button Style - Outline
+    &-outline-one{
+        border: 1px solid #3b3d49;
+        transition: $transition-base;
+        &::after{
+            position: absolute;
+            content: "";
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scaleX(.8);
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            transition: $transition-base;
+            z-index: -1;
+        }
+
+        &:hover{
+            border: 1px solid #2e303d;
+            &::after{
+                transform: translate(-50%, -50%) scaleX(1.2);
+                background: #2e303d;
+            }
+        }
+    }
+    
+}
+
+
+// Wave Animate Video Button
+@keyframes animate-ripple{
+    50% {
+        box-shadow: 0 0 0 20px rgba($white, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba($white, 0);
+    }
+}
+  
+  .wave-btn{
+    display: block;
+    position: relative;
+    width: 60px;
+    height: 60px; 
+    background: $color-gray-blue;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include breakpoint(large){
+        width: 100px;
+        height: 100px;
+    }
+  }
+
+  .ripple{
+      &, &::before, &::after{
+        position: absolute;
+        box-shadow: 0 0 0 0 rgba($white, .6);
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 100%; 
+        border-radius: 50%;
+        z-index: -1;
+        animation: animate-ripple 3s infinite linear backwards;
+        transform: translate(-50%, -50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+      }
+    
+  }
+
+
+  .ripple::before {
+    position: absolute;
+    content: "";
+    animation-delay: .5s;
+  }
+  
+  .ripple::after {
+    position: absolute;
+    content: "";
+    animation-delay: .9s;
+  }

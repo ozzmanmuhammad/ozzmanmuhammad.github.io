@@ -1,0 +1,145 @@
+/************************************
+* Component - Sidebar Widgets
+************************************/
+
+.sidebar-widget-area{
+    margin-top: 75px;
+    @include breakpoint(large){
+        margin-top: 0;
+    }
+
+}
+
+.sidebar-widget-single-area{
+    background: $color-dark-blue;
+    padding: 40px 40px 40px 40px;
+    margin-bottom: 50px;
+
+    @include breakpoint(medium){
+        padding: 60px 50px 75px 50px;
+    }
+
+    @include breakpoint(xlarge){
+        margin-bottom: 80px;
+    }
+
+    &:last-child{
+        margin-bottom: 0;
+    }
+
+    .title{
+        font-size: 34px;
+        color: $white;
+        font-weight: 600;
+        margin-bottom: 30px;
+
+        @include breakpoint(medium){
+            font-size: 40px;
+            margin-bottom: 45px;
+        }
+        @include breakpoint(large){
+            font-size: 40px;
+        }
+        @include breakpoint(xlarge){
+            font-size: 48px;
+        }
+    }
+
+}
+// Search Widgets
+.search-widgets-box{
+    position: relative;
+    input{
+        background: $color-gray-blue;
+        padding: 20px 60px 20px 25px;
+        border: none;
+        color: $white;
+        width: 100%;
+    }
+    button{
+        position: absolute;
+        border: none;
+        top: 0;
+        right: 0;
+        width: 60px;
+        height: 100%;
+        background: transparent;
+        color: $white;
+    }
+}
+
+// Nav Menu Widgets
+.widget-nav-list{
+    li{
+        display: block;
+        margin-bottom: 20px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+        a{
+            padding: 20px 30px;
+            background: $color-gray-blue;
+            color: $white;
+            font-weight: 300;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            transition: all .2s ease;
+            .text,.icon{
+                display: inline-block;
+                transition: all .5s ease;
+            }
+            &:hover{
+                background: $white;
+                color: $color-dark-blue;
+
+                .text{
+                    transform: translateX(30px);
+                }
+
+                .icon{
+                    position: absolute;
+                    left: 0px;
+                    transform: translateX(30px);
+                }
+            }
+
+            
+        }
+    }
+}
+
+// Recent Post Widgets
+.recent-blog-item-list{
+    li{
+        display: flex;
+        align-items: center;
+        margin-bottom: 35px;
+        &:last-child{margin-bottom: 0;}
+    }
+    .image{
+        width: 70px;
+        height: 70px;
+        overflow: hidden;
+        img{
+            width: 100%;
+            border-radius: 50%;
+        }
+    }
+
+    .content{
+        width: calc(100% - 70px);
+        padding-left: 25px;
+        .title{
+            font-size: 22px;
+            margin-bottom: 15px;
+            font-weight: 700;
+            line-height: 1.27;
+
+            a{
+                color: $white;
+            }
+        }
+    }
+}

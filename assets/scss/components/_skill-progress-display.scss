@@ -1,0 +1,91 @@
+/************************************
+* Component - Skill Progress Display
+************************************/
+
+.skill-display-section-box{
+    .section-content{
+        .btn{
+            margin-top: 30px;
+
+            @include breakpoint(large){
+                margin-top: 50px;
+            }
+            @include breakpoint(xlarge){
+                margin-top: 90px;
+            }
+
+            @include breakpoint(xxlarge){
+                margin-top: 100px;
+            }
+        }
+    }
+}
+
+.skill-display-wrapper{
+    margin: 0;
+
+    @include breakpoint(xxxlarge){
+        margin-right: 130px;
+    }
+}
+
+.skill-progress-single-item{
+    background: $color-gray-blue;
+    padding: 25px 25px 30px 25px;
+    margin-bottom: 25px;
+    @include breakpoint(medium){
+        padding: 45px 45px 50px 45px;
+    }
+
+    &:last-child{
+        margin-bottom: 0;
+    }
+    .tag{
+        margin-bottom: 25px;
+        display: inline-block;
+        background: $color-gray-blue;
+        position: relative;
+        z-index: 2;
+    }
+
+    .skill-box {
+        width: 100%;
+        height: 5px;
+        background: rgba($white, .1);;
+        position: relative;
+    }
+    .progress-line {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        background-color: $white;
+        transition: all 1s linear;
+        width: 0; }
+
+        .progress-line .skill-percentage {
+          font-size: 15px;
+          text-transform: uppercase;
+          position: absolute;
+          right: -15px;
+          top: -45px; 
+          z-index: 1;
+        }
+}
+
+.skill-display-shape {
+    position: absolute;
+    width: 375px;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: $color-gray-blue;
+    visibility: hidden;
+    opacity: 0;
+
+    @include breakpoint(xxxlarge){
+       visibility: visible;
+       opacity: 1;
+    }
+
+}

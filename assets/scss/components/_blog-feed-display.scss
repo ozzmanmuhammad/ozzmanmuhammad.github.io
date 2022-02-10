@@ -1,0 +1,116 @@
+/************************************
+* Component - Blog Feed Display
+************************************/
+
+.blog-feed-single-item{
+    overflow: hidden;
+    position: relative;
+    padding: 30px;
+    background: #282a37;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @include breakpoint(medium){
+        padding: 40px;
+        align-items: center;
+        flex-direction: row;
+    }
+    @include breakpoint(large){
+        
+        padding: 50px;
+    }
+
+    .content-box{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        @include breakpoint(large){
+            align-items: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    }
+    .image{
+        width: 100%;
+        margin-right: 0px;
+        @include breakpoint(medium){
+            width: 280px;
+            height: auto;
+            margin-right: 30px;
+        }
+        @include breakpoint(large){
+            width: 180px;
+            margin-right: 70px;
+        }
+        img{
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .content{
+      margin-top: 40px;
+
+        @include breakpoint(large){
+            margin-top: 0;
+            width: 450px;
+            margin-right: 100px;
+        }
+        .post-meta{
+            a{
+                font-weight: 300;
+                margin-right: 35px;
+                position: relative;
+
+                &::after{
+                    position: absolute;
+                    content: "-";
+                    left: calc(100% + 17.5px);
+                }
+                &:last-child{
+                    margin-right: 0;
+                    &::after{
+                        display: none;
+                    }
+                }
+            }
+            .catagory{
+                color: $white;
+            }
+        }
+        .title{
+            margin-top: 23px;
+            line-height: 36px;
+            font-size: 18px;
+            font-family: $body-font;
+            font-weight: 500;
+
+            @include breakpoint(small){
+                line-height: 42px;
+                font-size: 24px;
+            }
+            @include breakpoint(large){
+                line-height: 42px;
+                font-size: 25px;
+            }
+            a{
+                color: $white;
+            }
+        }
+    }
+
+    .btn{
+        margin-top: 30px;
+
+        @include breakpoint(xlarge){
+            margin-top: 0;
+        }
+    }
+
+    &:hover .inner-shape{
+        transform: scale(1);
+        visibility: visible;
+        opacity: 1;
+    }
+}

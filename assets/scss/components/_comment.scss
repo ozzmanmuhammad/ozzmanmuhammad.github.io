@@ -1,0 +1,147 @@
+
+/************************************
+* Component - Comment
+************************************/
+.comment-box {
+    .title {
+        font-size: 36px;
+        margin-bottom: 20px;
+
+        @include breakpoint(small) {
+            font-size: 45px;
+        }
+
+        @include breakpoint(medium) {
+            font-size: 45px;
+            margin-bottom: 30px;
+        }
+
+        @include breakpoint(large) {
+            font-size: 50px;
+            margin-bottom: 50px;
+        }
+
+        @include breakpoint(xlarge) {
+            font-size: 55px;
+        }
+    }
+
+    .comment-list-item > li {
+        margin-bottom: 40px;
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+
+    .comment-single-item {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        @include breakpoint(small){
+            flex-direction: row;
+        }
+        .image {
+            width: 100px;
+            height: 100px;
+            margin-right: 0px;
+            margin-bottom: 40px;
+            @include breakpoint(small){
+                margin-right: 45px;
+                margin-bottom: 0px;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .content {
+            width: 100%;
+            @include breakpoint(small){
+                width: calc(100% - 145px);
+            }
+            .top {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                margin-bottom: 20px;
+            }
+
+            .author-meta {
+                .name {
+                    font-size: 32px;
+                    font-weight: 500;
+                    margin-bottom: 15px;
+                    margin-top: -10px;
+                }
+            }
+
+            .designation {
+                display: block;
+            }
+
+            .replay-btn {
+                background: none;
+                border: none;
+                color: $white;
+                font-size: 16px;
+                font-weight: 600px;
+
+            }
+
+            .bottom{
+                .text p{
+                    &:last-child{
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .has-reply > .comment-single-item{
+        margin-left: 0px;
+
+        @include breakpoint(large){
+            margin-left: 50px;
+        }
+
+        @include breakpoint(xlarge){
+            margin-left: 100px
+            ;
+        }
+        margin-bottom: 40px;
+        &:first-child{
+            margin-top: 40px;
+        }
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+}
+
+.comment-form-box{
+    .title {
+        font-size: 36px;
+        margin-bottom: 20px;
+
+        @include breakpoint(small) {
+            font-size: 45px;
+        }
+
+        @include breakpoint(medium) {
+            font-size: 45px;
+            margin-bottom: 30px;
+        }
+
+        @include breakpoint(large) {
+            font-size: 50px;
+            margin-bottom: 50px;
+        }
+
+        @include breakpoint(xlarge) {
+            font-size: 55px;
+        }
+    }
+}

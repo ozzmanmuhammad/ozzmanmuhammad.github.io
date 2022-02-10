@@ -1,0 +1,27 @@
+.default-form-group {
+    input, textarea{
+        background: $color-gray-blue;
+        padding: 12px 20px;
+        border: 1px solid rgba($white, .1);
+        color: $white;
+        transition: all .3s ease;
+        &:focus{
+            border-color: $white;
+        }
+
+        @include breakpoint(small){
+            padding: 20px 25px;
+        }
+    }
+
+    textarea{
+        min-height: 180px;
+        @include breakpoint(medium){
+            min-height: 240px;
+        }
+    }
+
+    .btn{
+        margin-top: 20px;
+    }
+}

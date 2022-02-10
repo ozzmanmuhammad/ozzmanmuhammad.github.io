@@ -1,0 +1,60 @@
+/************************************
+* Component - Counterup Display
+************************************/
+
+.counterup-single-item{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+    @include breakpoint(large){
+        align-items: flex-start;
+        flex-direction: row;
+        text-align: left;
+    }
+    .icon{
+        width: 70px;
+        height: 70px;
+        border: 1px solid #40424d;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 0;
+        margin-bottom: 40px;
+        @include breakpoint(large){
+            margin-right: 50px;
+            margin-bottom: 0;
+        }
+        img{
+            width: 25px;
+            height: auto;
+        }
+    }
+
+    .content{
+        text-align: center;
+        @include breakpoint(large){
+            text-align: left;
+        }
+        .number{
+            font-family: $body-font;
+            font-size: 40px;
+            font-weight: 300;
+            margin-top: -10px;
+            margin-bottom: 25px;
+            @include breakpoint(medium){
+                font-size: 52px;
+            }
+        }
+    }
+}
+
+.counter-display-wrapper{
+    margin-bottom: -60px;
+    .row {
+        .col-12{
+            margin-bottom: 60px;
+        }
+    }
+}
