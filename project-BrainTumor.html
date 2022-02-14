@@ -24,6 +24,9 @@
     <link rel="stylesheet" href="assets/css/plugins/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/css/plugins/nice-select.css">
     <link rel="stylesheet" href="assets/css/plugins/venobox.min.css" />
+    <link rel="stylesheet" href="assets/brain_timor.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  
 
     <!-- Minify Version -->
     <!-- <link rel="stylesheet" href="assets/css/vendor/vendor.min.css">
@@ -55,20 +58,19 @@
                             <ul class="header-nav">
                                 <li><a href="index.html">Home</a></li>
                                 <li class="has-dropdown">
-                                    <a href="skill-list.html">Skills</a>
-                                   
+                                    <a href="service-list.html">Skills</a>
+                                  
                                 </li>
                                 <li class="has-dropdown">
                                     <a href="project-list.html">Projects</a>
-                                  
+                                    
                                 </li>
-                               
+                              
                                 <li class="has-dropdown">
                                     <a href="#">Pages</a>
                                     <ul class="submenu">
-                                        
-                                        <li><a href="blog-list.html">Tips & Tricks</a></li>
                                         <li><a href="about.html">About Me</a></li>
+                                        <li><a href="blog-list.html">Tips & Tricks</a></li>
                                         
                                         <!-- <li><a href="404-page.html">404 Page</a></li> -->
                                     </ul>
@@ -77,17 +79,9 @@
                             </ul>
                             <!-- End Header Menu -->
                         </div>
-                        <div class="col" id="face2">
+                        <div class="col">
                             <div class="header-btn-link text-end">
                                <a href="contact.html" class="btn btn-sm btn-outline-one icon-space-left">Hire Me <i class="icofont-double-right"></i></a>
-                            </div>
-                        </div>
-                        <div  class = "face" >  
-                            <div class="teeth"></div>
-                            <div class="teeth2"></div>
-                            <div class="eyes">
-                                <div class="eye"></div>
-                                <div class="eye"></div>
                             </div>
                         </div>
                     </div>
@@ -132,7 +126,7 @@
                                 <a href="index.html"><span>Home</span></a>
                             </li>
                             <li>
-                                <a href="skill-list.html">Skills</a>
+                                <a href="service-list.html">Skills</a>
                                 
                             </li>
                             <li>
@@ -183,7 +177,7 @@
                             <div class="breadcrumb-content">
                                 <h2 class="title">Project Details</h2>
                                 <ul class="breadcrumb-link">
-                                    <li><a href="project-list.html">Projects</a></li>
+                                    <li><a href="project-list">Projects</a></li>
                                     <li class="active" aria-current="page">Project Details</li>
                                 </ul>
                             </div>
@@ -203,7 +197,7 @@
                             <!-- Start Project Content Section -->
                             <div class="project-content-section pos-relative">
                                 <div class="project-hero-image">
-                                    <img src="assets/images/project/food5.jpg" alt="">
+                                    <img src="assets/images/project/brain_tumor.png" alt="">
                                 </div>
 
                                 <div class="row">
@@ -211,26 +205,24 @@
                                         <!-- Start Section Content -->
                                         <div class="default-content-style pos-relative">
                                             <span class="section-tag">DL - CNN Tensorflow</span>
-                                            <h2 class="title">Vision - Food Image Classifier.</h2>
-                                            <p>For this project I built a food classifier to identify food from different food images. This project aim was to beat 77.4% top-1 accuracy of 
-                                                <a href="https://arxiv.org/abs/1606.05675">DeepFood paper.</a>
-                                                 I was able to get the model to predict the class of the food from 101 classes with 70% accuracy with out fine-tuning and 80% with fine-tuned model. 
+                                            <h2 class="title">Vision - Brain Tumor Classifier & Live Prediction in Browser.</h2>
+                                            <p>For this project, I built a Binary-Classifier to identify normal MRI brain scans vs with tumor MRI brain scans. This project aim was to achieve above 90% top-1 accuracy.
+                                                 I was able to get the model to predict the class of the scans with 97% accuracy with out using transfer learning. 
                                                  </p>
 
-                                            <p>To get these results I used transfer learning (no fine-tuning) on a existing noncomplex pretrained (on ImageNet) Convolutional Neural Network (CNN) model "EfficienetNetB0".
-                                                This created time efficiencies and solid results.
-                                                Further experiments are needed to improve the accuracy like using more complex pretrained models (EfficienetNetB4 or ResNet34).</p>
+                                            <p>To get these results I build a non-complex Convolutional Neural Network (CNN) model. This created time efficiencies and solid results.
+                                                Further experiments are needed to improve the accuracy and overfitting like regularization, transfer-learning or getting more data.</p>
 
                                             <h3 class="sub-title">More Details</h3>
-                                            <p>I started this project with binary classification problem by making a model that was able to classify Pizza or steaks foods. This experiment was also done on a
-                                                simple CNN models, having no more then 2 Conv2D (8 - 16 filters) hidden layers and AveragePooling layer. These models were able to achieve above 85% accuracy.
-                                                After simple experiments I started adding more classes and did two main experiments, first with 10 classes and last with 101 classes.
-                                                The target goal was to beat two papers, 50.76% top-1 accuracy of <a href="https://data.vision.ee.ethz.ch/cvl/datasets_extra/food-101/static/bossard_eccv14_food-101.pdf">"Food101 paper"</a> 
-                                                and 77.4% top-1 accuracy of <a href="https://arxiv.org/abs/1606.05675">"Deepfood paper"</a>
-                                                that were also build on the same datasets. Details are in the following sections.
+                                            <p>I started this project with binary classification problem by making a model that was able to classify normal vs tumor brains. This experiment was done on a
+                                                simple CNN models, having no more then 3 Conv2D (32, 32, 64 filters respectively) hidden layers, MaxPooling layer, dense layer, and dropout layer. These models were able to achieve above 95% accuracy.
+                                                But from the loss and accuracy curve between train data and validation data, it was clear that model was overfitting because the distance between the train and val graph lines were large. Due to less limited time 
+                                                I stoped the project there and didn't regularize or fine-tuned the model.
+                                                Other Details are in the following sections.
 
                                             </p>
-
+                                            
+                                            
                                             <ul class="content-list-item content-list-with-icon">
                                                 <li>
                                                     <div class="left">
@@ -240,68 +232,68 @@
                                                     </div>
                                                     <div class="right">
                                                         <h4 class="list-title">Exporatory Data Analysis</h4>
-                                                        <p>Both experiments contained same type of data but with different amount and classes of data.
-                                                           In experiment #1, the food-101 data was downloaded from <a href="https://www.kaggle.com/dansbecker/food-101">Kaggle</a>
-                                                           and using python script 10 random classes with there train and test images were extracted. While in case of experiment #2 the
-                                                           tensorflow dataset API with data API was used to make the process easy and efficient by using `.prefetch()` and `.AUTOTUNE`
-                                                           features. Other  EDA's are in the table.
-                                                        </p>
-                                                        <table class="table table-hover table-dark color-table">
-                                                                <thead>
-                                                                  <tr>
-                                                                    <th scope="col"></th>
-                                                                    <th scope="col">Experiment #1</th>
-                                                                    <th scope="col">Experiment #2</th>
-                                                                  
-                                                                  </tr>
-                                                                </thead>
-                                                                <tbody>
-                                                                  <tr>
-                                                                    <th scope="row">Data Source</th>
-                                                                    <td>Kaggle</td>
-                                                                    <td>TensorFlow Datasets</td>
-                                                                    
-                                                                  </tr>
-                                                                  <tr>
-                                                                    <th scope="row">Classes</th>
-                                                                    <td>10</td>
-                                                                    <td>101</td>
-                                                                    
-                                                                  </tr>
-                                                                  <tr>
-                                                                    <th scope="row">Individual Class</th>
-                                                                    <td>750 x 10 </td>
-                                                                    <td>750 x 101</td>
-                                                                  </tr>
-                                                                  <tr>
-                                                                    <th scope="row">Train Data</th>
-                                                                    <td>7,575 Images</td>
-                                                                    <td>75,750 Images</td>
-                                                                  </tr>
-                                                                  <tr>
-                                                                    <th scope="row">Test Data</th>
-                                                                    <td>25,250 Images</td>
-                                                                    <td>25,250 Images</td>
-                                                                  </tr>
-                                                                  <tr>
-                                                                    <th scope="row">Normalization</th>
-                                                                    <td>Yes</td>
-                                                                    <td>Yes</td>
-                                                                  </tr>
-                                                                  <tr>
-                                                                    <th scope="row">Data Augmentation</th>
-                                                                    <td>No</td>
-                                                                    <td>No</td>
-                                                                  </tr>
-                                                                  <tr>
-                                                                    <th scope="row">Data loading</th>
-                                                                    <td>pandas</td>
-                                                                    <td>tf.data API</td>
-                                                                  </tr>
-                                                                </tbody>
-                                                        </table>
-                                                        <p>Few examples from the traning dataset.</p>
-                                                        <img src="assets/images/project/Food101_examples.png" class="img-fluid" alt="">
+                                                        <p>The experiment data was downloaded from <a href="https://www.kaggle.com/ahmedhamada0/brain-tumor-detection">Kaggle Br35H</a>.
+                                                            It contained total 3000+ images, the data was small as compared to the data needed for ANN training. The dataset contained 3 folder, 
+                                                            'yes' -> with tumor, 'no' -> no tumor and 'pred'. So I used tensorflow data API to load and preprocess the data and split the dataset
+                                                            using sklearn train_test_split into 80-20 train and val datasets. The 'pred' images were used in the testing process.
+                                                         </p>
+                                                         <table class="table table-hover table-dark color-table">
+                                                            <thead>
+                                                              <tr>
+                                                                <th scope="col"></th>
+                                                                <th scope="col">Experiment #1</th>
+                                                               
+                                                              
+                                                              </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                              <tr>
+                                                                <th scope="row">Data Source</th>
+                                                                <td>Kaggle</td>
+                                                                
+                                                                
+                                                              </tr>
+                                                              <tr>
+                                                                <th scope="row">Classes</th>
+                                                                <td>2 (yes / no) tumor</td>
+                                                               
+                                                                
+                                                              </tr>
+                                                              <tr>
+                                                                <th scope="row">Individual Class</th>
+                                                                <td>1500 x 2 = 3,000</td>
+                                                               
+                                                              </tr>
+                                                              <tr>
+                                                                <th scope="row">Train Data</th>
+                                                                <td>2,388 Images</td>
+                                                               
+                                                              </tr>
+                                                              <tr>
+                                                                <th scope="row">Test Data</th>
+                                                            
+                                                                <td>612 Images</td>
+                                                              </tr>
+                                                              <tr>
+                                                                <th scope="row">Normalization</th>
+                                                                <td>Yes</td>
+                                                                
+                                                              </tr>
+                                                              <tr>
+                                                                <th scope="row">Data Augmentation</th>
+                                                                <td>No</td>
+                                                                
+                                                              </tr>
+                                                              <tr>
+                                                                <th scope="row">Data loading</th>
+                                                                
+                                                                <td>tf.data API</td>
+                                                              </tr>
+                                                            </tbody>
+                                                         </table>
+
+                                                         <p>Few examples from the traning dataset.</p>
+                                                         <img src="assets/images/project/tumor_examples.png" class="img-fluid" alt="">
                                                             
                                                     </div>
                                                 </li>
@@ -313,55 +305,47 @@
                                                     </div>
                                                     <div class="right">
                                                         <h4 class="list-title">Model Building</h4>
-                                                        <p>Both main experiments were done on EfficienetNet-B0 architectures. These pretrained models were loaded uisng tensorflow.applications utility.
-                                                            I used BO version because it is less dense as compared to B7 and I wanted to do an experiment with fine-tuning the layers, so training 
-                                                            B7 model with fine tuning would've taken alot of time and resources. Experiment #2 model was trainied 100 epochs but with callback EarlyStopping as compared to 
-                                                            experiment #1 which was trainied 5 epochs and fine-tuned on another 5 (less epochs to avoid overfitting as it was trained only on 7,575 images)
+                                                        <p>The experiments was done on CNN architecture model, which was trainied 10 epochs (less epochs to avoid overfitting as it was trained only on 2,388 images)
                                                         </p>
-                                                            <table class="table table-hover table-dark color-table">
-                                                                <thead>
-                                                                  <tr>
-                                                                    <th scope="col"></th>
-                                                                    <th scope="col">Experiment #1</th>
-                                                                    <th scope="col">Experiment #2</th>
-                                                                  
-                                                                  </tr>
-                                                                </thead>
-                                                                <tbody>
-                                                                  <tr>
-                                                                    <th scope="row">Architecture</th>
-                                                                    <td>EfficienetNet-B0</td>
-                                                                    <td>EfficienetNet-B0</td>
-                                                                  </tr>
-                                                                  <tr>
-                                                                    <th scope="row">Hidden layers</th>
-                                                                    <td>237</td>
-                                                                    <td>237</td>
-                                                                    
-                                                                  </tr>
-                                                                  <tr>
-                                                                    <th scope="row">Fine-Tuned</th>
-                                                                    <td>Yes</td>
-                                                                    <td>Yes</td>
-                                                                    
-                                                                  </tr>
-                                                                  <tr>
-                                                                    <th scope="row">Fine-Tunedlayers</th>
-                                                                    <td>Last 5</td>
-                                                                    <td>All</td>
-                                                                  </tr>
-                                                                  <tr>
-                                                                    <th scope="row">Callbacks</th>
-                                                                    <td>ModelCheckpoint</td>
-                                                                    <td>ModelCheckpoint<br>EarlyStopping</td>
-                                                                  </tr>
-                                                                  <tr>
-                                                                    <th scope="row">Epochs</th>
-                                                                    <td>10</td>
-                                                                    <td>100 (stopped at 5)</td>
-                                                                  </tr>
-                                                                </tbody>
-                                                              </table>
+                                                        <table class="table table-hover table-dark color-table">
+                                                            <thead>
+                                                              <tr>
+                                                                <th scope="col"></th>
+                                                                <th scope="col">Experiment #1</th>
+                                                                
+                                                              
+                                                              </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                              <tr>
+                                                                <th scope="row">Architecture</th>
+                                                                <td>CNN</td>
+                                                               
+                                                              </tr>
+                                                              <tr>
+                                                                <th scope="row">Hidden layers</th>
+                                                                <td>3 Conv2D, 3 MaxPooling, Flatten, Dense, Dropout</td>
+                                                         
+                                                                
+                                                              </tr>
+                                                              <tr>
+                                                                <th scope="row">Hidden Width</th>
+                                                                <td>(32+ 32+ 64+ 64), dropout = 0.5</td>
+
+                                                              </tr>
+                                                             
+                                                              <tr>
+                                                                <th scope="row">Callbacks</th>
+                                                                <td>None</td>
+                                                                
+                                                              </tr>
+                                                              <tr>
+                                                                <th scope="row">Epochs</th>
+                                                                <td>10</td>
+                                                                
+                                                              </tr>
+                                                            </tbody>
+                                                          </table>
                                                     </div>
                                                 </li>
                                                 <li>
@@ -372,31 +356,26 @@
                                                     </div>
                                                     <div class="right">
                                                         <h4 class="list-title">Model Performance</h4>
-                                                        <p>Experiment #1 model achieved only 50% accuracy which was not surprising as it was trained on less data and epochs,
-                                                            Nevertheless it was able to achieve the same accuracy as of our target goal 50.76% top-1 accuracy of <a href="https://data.vision.ee.ethz.ch/cvl/datasets_extra/food-101/static/bossard_eccv14_food-101.pdf">"Food101 paper"</a> 
-                                                            ,which was trained on 75,000 images as compared to our 7000 images. But our experiment #2 achieved 80% accuracy and was able to beat the target goal 
-                                                            77.4% top-1 accuracy of <a href="https://arxiv.org/abs/1606.05675">"Deepfood paper"</a>.
+                                                        <p>Model achieved 97% accuracy which was not surprising as it was trained on less data and epochs, and it was overfitting,
+                                                            Nevertheless it was able to achieve the accuracy as of our target goal 90+% top-1 accuracy.
                                                         </p>
                                                     </div>
                                                 </li>
                                             </ul>
 
-                                            <h3 class="sub-title">Analysis and Prediction</h3>
-                                            <p>To understand results and the decision function I also build Confusion Matrix between 101 classes and also calculated F1-score of each class.
-                                                To view these graphs and top most wrong predictions please visit my  <a href="https://github.com/ozzmanmuhammad/FoodVision" target="_blank">GitHub page</a>, as these graphs were of
-                                                high dimensions so I didn't uploaded them on site.
-                                            </p>
-                                            <p>Also other then test data I used custom images which were collected from different. These images were also preprocessed to match there dimension, shape and scale.
-                                                Out of 10 model predicted all correct with high probability scores.</p>
-                                                <img src="assets/images/project/predictions_custom_images.png" class="img-fluid" alt="">
+                                            <h3 class="sub-title">Predictions & live Prediction in Browser</h3>
                                            
-                                           <p>To view the source code, evaluation metrics (Precision, Recall, F1-score), Confusion Matrix and Top wrong predictions, please 
+                                            <p>For prediction I used the 'pred' images which were unseen for the model. These images were also preprocessed to match there dimension, shape and scale.
+                                                Out of 9 model predicted all correct with high probability scores.</p>
+                                                <img src="assets/images/project/tumor_preds.png" class="img-fluid" alt="">
+                                           
+                                           <p>To view the source code, dataset, model, evaluation metrics (Accuracy), please 
                                                visit my Github page. </p>
                                                
                                             <form action="https://github.com/ozzmanmuhammad/FoodVision" target="_blank" class="footer-newsletter">
                                                 <button class="submit-btn" >Github page</button>
                                             </form>
-                                            </div>
+                                        </div>
                                         <!-- End Section Content -->
                                     </div>
                                     <div class="col-xl-3 col-lg-4 offset-xl-1">
@@ -407,39 +386,38 @@
                                                 <!-- Start Project Single Box -->
                                                 <li class="project-sidebar-single-box">
                                                     <h6 class="title-text">Project Name:</h6>
-                                                    <span class="text">FoodVision</span>
+                                                    <span class="text">BrainTumor-Cls</span>
                                                 </li>
                                                 <!-- End Project Single Box -->
                                                 <!-- Start Project Single Box -->
                                                 <li class="project-sidebar-single-box">
                                                     <h6 class="title-text">Tool:</h6>
-                                                    <span class="text">Tensorflow <br> Python <br> Colaboratory</span>
+                                                    <span class="text">Tensorflow <br> Python <br> JS <br>Colaboratory</span>
                                                     
                                                 </li>
                                                 <!-- End Project Single Box -->
                                                 <!-- Start Project Single Box -->
                                                 <li class="project-sidebar-single-box">
                                                     <h6 class="title-text">Datasets:</h6>
-                                                    <span class="text"><a href="https://www.kaggle.com/dansbecker/food-101">Kaggle <br> Food-101</a></span>
+                                                    <span class="text"><a href="https://www.kaggle.com/ahmedhamada0/brain-tumor-detection">Kaggle <br> Br35H</a></span>
                                                 </li>
                                                 <!-- End Project Single Box -->
                                                 <!-- Start Project Single Box -->
                                                 <li class="project-sidebar-single-box">
                                                     <h6 class="title-text">Architecture:</h6>
-                                                    <span class="text">CNN<br> EfficienetNetB0 </span>
+                                                    <span class="text">CNN </span>
                                                 </li>
                                                 <!-- End Project Single Box -->
                                                 <!-- Start Project Single Box -->
                                                 <li class="project-sidebar-single-box">
-                                                    <h6 class="title-text">Target to Beat:</h6>
-                                                    <span class="text"> <a href="https://arxiv.org/abs/1606.05675">DeepFood paper.</a><br>
-                                                        <a href="https://data.vision.ee.ethz.ch/cvl/datasets_extra/food-101/static/bossard_eccv14_food-101.pdf">Food101 paper.</a></span>
+                                                    <h6 class="title-text">Target :</h6>
+                                                    <span class="text">90+% Accuracy</span>
                                                 </li>
                                                 <!-- End Project Single Box -->
                                                 <!-- Start Project Single Box -->
                                                 <li class="project-sidebar-single-box">
                                                     <h6 class="title-text">Results:</h6>
-                                                    <span class="text">80.% Accuracy</span>
+                                                    <span class="text">97.% Accuracy</span>
                                                     
                                                 </li>
                                                 <!-- End Project Single Box -->
@@ -457,7 +435,48 @@
             </div>
         </div>
         <!-- .....:::::: End Project Details Section :::::.... -->
-  
+
+        <!-- ...::: Start Counter Display Section :::... -->
+        <div class="counter-display-section section-gap-tb-165 section-bg-2">
+            <div class="counter-display-wrapper">
+                <div class="container">
+                    <div class="right">
+                        <h1 class="list-title">Predictions in Browser.</h1>
+                        <p>Model was download in Keras .h5 format and then was converted for tensorflow java script.
+                            Upload any MRI brain scan image and test the prediction. The predictions are not always right.
+
+                        </p>
+                    </div>
+                    <div class="contain">
+                        <div class="wrapper">
+                           <div class="image">
+                              <img id="pred" src="" alt = "" />
+                              
+                           </div>
+                           <div class="content">
+                              <div class="icon">
+                                 <i class="fas fa-cloud-upload-alt"></i>
+                              </div>
+                              <div class="text">
+                                 No file chosen, yet!
+                              </div>
+                           </div>
+                           <div id="cancel-btn">
+                              <i class="fas fa-times"></i>
+                           </div>
+                           <div class="file-name">
+                              Prediction:
+                           </div>
+                        </div>
+                        <button onclick="defaultBtnActive()" id="custom-btn">Choose a file</button>
+                        <input id="default-btn" type="file" hidden>
+                        <div></div>
+                     </div>
+                </div>
+            </div>
+        </div>
+        <!-- ...::: End Counter Display Section :::... -->
+
         <!-- ...::: Start Footer Section :::... -->
         <footer class="footer-section section-bg overflow-hidden pos-relative">
             <div class="footer-inner-shape-top-left"></div>
@@ -528,13 +547,13 @@
                     <div class="row justify-content-center justify-content-md-between align-items-center flex-column-reverse flex-md-row">
                         <div class="col-auto">
                             <div class="footer-copyright">
-                                <p class="copyright-text">&copy; 2022  Made with <i class="icofont-heart"></i></p>
+                                <p class="copyright-text">&copy; 2022  Made with <i class="icofont-heart"></i>  </p>
                             </div>
                         </div>
                         <div class="col-auto">
                             <a href="index.html" class="footer-logo">
                                 <div class="logo">
-                                    <h2>Portfolio.</h2>
+                                  <h2>Portfolio.</h2>
                                 </div>
                             </a>
                         </div>
@@ -579,6 +598,8 @@
 
     <!--Main JS (Common Activation Codes)-->
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/Brain_tumor.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs/dist/tf.min.js"> </script>
 
 </body>
 
