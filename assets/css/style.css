@@ -1016,6 +1016,11 @@ p:last-child {
   padding-top: 75px;
   padding-bottom: 75px;
 }
+
+.section-gap-tb-200 {
+  padding-top: 75px;
+  padding-bottom: 105px;
+}
 @media (min-width: 992px) {
   .section-gap-tb-165 {
     padding-top: 115px;
@@ -1890,6 +1895,8 @@ section .imgg18{
 .swiper-container .swiper-wrapper{
   padding: 3%;
 }
+
+
 /*Service Slider */
 .service-display-dots {
   position: absolute;
@@ -4693,3 +4700,4 @@ a.image {
   background-position: center 50%;
   background-repeat: no-repeat;
 }
+

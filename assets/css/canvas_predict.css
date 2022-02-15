@@ -1,0 +1,65 @@
+
+.contain{
+  
+  position: relative;
+
+  margin-top: 5%;
+  margin-bottom: 10%;
+  height: 350px;
+  width: 430px;
+  left:5%;
+  
+}
+
+
+.custom-btn{
+  position: absolute;
+  left:25%;
+  top:400px;
+  margin-top: 30px;
+  /* padding-bottom: 30px; */
+  display: block;
+  width: 50%;
+  height: 50px;
+  border: none;
+  outline: none;
+  border-radius: 25px;
+  color: #252734;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  /* background: linear-gradient(135deg,#3a8ffe 0%,#9658fe 100%); */
+}
+
+#sketch-holder{
+
+  padding-left: 2%;
+}
+
+.div-canvas-preds {
+  position: relative;
+  width: 511px;
+  height: 400px;
+  /* display: block; */
+
+  background: #252734;
+  border-radius: 6px;
+  padding: 45px;
+  overflow: hidden;
+  box-shadow: 0 ;
+  transition: box-shadow 0.3s;
+
+} 
+
+@media (min-width: 768px) {
+  .div-canvas-preds {
+    padding: 50px;
+  }
+}
+@media (min-width: 992px) {
+  .div-canvas-preds {
+    padding: 70px;
+  }
+}
