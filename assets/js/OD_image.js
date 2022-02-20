@@ -32,7 +32,7 @@ function defaultBtnActive(){
 
 const s = ( sketch ) => {
 
-    // const objectDetector = ml5.objectDetector('cocossd', {}, modelLoaded);
+    const objectDetector = ml5.objectDetector('cocossd', {}, modelLoaded);
 
     function modelLoaded() {
       console.log('Model Loaded!');
