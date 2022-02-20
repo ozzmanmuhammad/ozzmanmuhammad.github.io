@@ -45,7 +45,7 @@ function setup() {
 
 function videoReady() {
   // Models available are 'cocossd', 'yolo'
-  // webcamDetector = ml5.objectDetector('cocossd', modelReady);
+  webcamDetector = ml5.objectDetector('cocossd', modelReady);
 }
 
 
