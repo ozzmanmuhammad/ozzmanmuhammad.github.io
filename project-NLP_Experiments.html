@@ -339,7 +339,7 @@
                                             
                                             <h3 class="sub-title">Exp #2: Text Summarization</h3>
                                             <p>
-                                                For this task I use a text "Extractive Summarization" model to summarize the blog posts.
+                                                For this task I used a text "Extractive Summarization" model to summarize the blog posts.
                                                 For that I did web scraping using `BeautifullSoup` and the model I choose from the huggingface.co/models was 
                                                 <a href="https://huggingface.co/sshleifer/distilbart-cnn-12-6">BART-CNN</a> which is the default in the summarization pipeline.
                                                 Other models are also available at <a href="https://huggingface.co/models?filter=summarization"> summarization models.</a>
@@ -402,13 +402,38 @@
 
                                             </p>
                                            
-                                            <h3 class="sub-title">How to complete this?</h3>
-                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the indust standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it typesetting, remaining essentially unchanged.</p>
+                                            <h3 class="sub-title">Exp #3: Text Sentiment Analysis</h3>
+                                            <p>
+                                                For this task I did two experiments because I wasn't satisfied with the results. First I used Huggingface pipeline 
+                                                to bring <a href="https://huggingface.co/cardiffnlp/twitter-roberta-base-sentiment">roBERTa</a> a model model trained on ~58M tweets and finetuned for sentiment analysis with the TweetEval benchmark.
+                                                This model is suitable for English. And for the second I build NaiveBayes model, which I trained on nltk corpus movie reviews.  
+                                             </p>
+                                             <p>
+                                                 Both of these models performed their inferences on tweets, which were downloaded using Twitter API and python 
+                                                 tweepy library. I downloaded total 5000 tweets regarding a specific topic using hashtag #AuratMarch2022 to check
+                                                 the people's sentiment. But because tweets content were so different from the data on which these models were trained
+                                                 so model performed poorly with wrong classifications
+                                             </p>
+
+                                             <p>
+                                                 Sentiment Analysis on 5000 tweets regarding #AuratMarch2022 using roBERTa models 
+                                            </p>
+                                            
+                                                 <img src="assets/images/project/SA_tweet.png" class="img-fluid" alt="">
 
                                             
-                                            <h3 class="sub-title">Project result and summery</h3>
-                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the indust standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it typesetting, remaining essentially unchanged.</p>
-                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the indust standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it typesetting, remaining essentially unchanged.</p>
+                                            <h3 class="sub-title">Future Experiments</h3>
+                                            <p>
+                                                In future I am planing to use GTP-2 for text generation, and sentiment analysis from Yelp page, 
+                                                to use Abstractive Summarization with Pegasus, and building own model using papers.
+                                            </p>
+
+                                            <p>To view the source code, please 
+                                                visit my Github page. </p>
+                                                
+                                             <form action="https://github.com/ozzmanmuhammad/NLP-Experiments" target="_blank" class="footer-newsletter">
+                                                 <button class="submit-btn" >Github page</button>
+                                             </form>
                                         </div>
                                         <!-- End Section Content -->
                                     </div>
@@ -420,33 +445,29 @@
                                                 <!-- Start Project Single Box -->
                                                 <li class="project-sidebar-single-box">
                                                     <h6 class="title-text">Project Name:</h6>
-                                                    <span class="text">Givest</span>
+                                                    <span class="text">NLP Experiments</span>
                                                 </li>
                                                 <!-- End Project Single Box -->
                                                 <!-- Start Project Single Box -->
                                                 <li class="project-sidebar-single-box">
-                                                    <h6 class="title-text">Clients:</h6>
-                                                    <span class="text">Reatha Alcorn</span>
+                                                   
+                                                    <h6 class="title-text">Tool:</h6>
+                                                    <span class="text">Tensorflow <br> Python <br>Colaboratory</span>
                                                 </li>
                                                 <!-- End Project Single Box -->
                                                 <!-- Start Project Single Box -->
                                                 <li class="project-sidebar-single-box">
-                                                    <h6 class="title-text">Budget:</h6>
-                                                    <span class="text">$890.00</span>
+                                                    <h6 class="title-text">Architecture:</h6>
+                                                    <span class="text">Transformers</span>
                                                 </li>
                                                 <!-- End Project Single Box -->
                                                 <!-- Start Project Single Box -->
                                                 <li class="project-sidebar-single-box">
-                                                    <h6 class="title-text">Duration:</h6>
-                                                    <span class="text">25 days</span>
+                                                    <h6 class="title-text">Models:</h6>
+                                                    <span class="text">GPT-Neo<br/> BART <br/> roBERTa <br/>NaiveBayes</span>
                                                 </li>
                                                 <!-- End Project Single Box -->
-                                                <!-- Start Project Single Box -->
-                                                <li class="project-sidebar-single-box">
-                                                    <h6 class="title-text">Date:</h6>
-                                                    <span class="text">09 Feb, 2021</span>
-                                                </li>
-                                                <!-- End Project Single Box -->
+                                               
                                             </ul>
                                             <!-- End Project Sidebar Item -->
                                         </div>
@@ -461,56 +482,6 @@
             </div>
         </div>
         <!-- .....:::::: End Project Details Section :::::.... -->
-
-        <!-- ...::: Start Counter Display Section :::... -->
-        <div class="counter-display-section section-gap-tb-165 section-bg-2">
-            <div class="counter-display-wrapper">
-                <div class="container">
-                    <div class="row justify-content-center justify-content-sm-start">
-                        <div class="d-block d-md-flex justify-content-md-start col-12 col-sm-4 col-md-4">
-                            <!-- Start Counterup Single Item -->
-                            <div class="counterup-single-item">
-                                <div class="icon">
-                                    <img src="assets/images/icon/counterup-icon-1.png" alt="">
-                                </div>
-                                <div class="content">
-                                    <h2 class="number"><span class="counter">2,58</span>+</h2>
-                                    <span class="text">Happy Clients</span>
-                                </div>
-                            </div>
-                            <!-- End Counterup Single Item -->
-                        </div>
-                        <div class="d-block d-md-flex justify-content-md-center col-12 col-sm-4 col-md-4">
-                            <!-- Start Counterup Single Item -->
-                            <div class="counterup-single-item">
-                                <div class="icon">
-                                    <img src="assets/images/icon/counterup-icon-2.png" alt="">
-                                </div>
-                                <div class="content">
-                                    <h2 class="number"><span class="counter">590</span>K</h2>
-                                    <span class="text">Project Complete</span>
-                                </div>
-                            </div>
-                            <!-- End Counterup Single Item -->
-                        </div>
-                        <div class="d-block d-md-flex justify-content-md-end col-12 col-sm-4 col-md-4">
-                            <!-- Start Counterup Single Item -->
-                            <div class="counterup-single-item">
-                                <div class="icon">
-                                    <img src="assets/images/icon/counterup-icon-3.png" alt="">
-                                </div>
-                                <div class="content">
-                                    <h2 class="number"><span class="counter">28</span>+</h2>
-                                    <span class="text">Years of Experience</span>
-                                </div>
-                            </div>
-                            <!-- End Counterup Single Item -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- ...::: End Counter Display Section :::... -->
 
         <!-- ...::: Start Footer Section :::... -->
         <footer class="footer-section section-bg overflow-hidden pos-relative">
@@ -532,8 +503,8 @@
                         <div class="row">
                             <div class="col-12">
                                 <form action="#" class="footer-newsletter">
-                                    <input type="email" placeholder="demo@example.com">
-                                    <button class="submit-btn" type="submit">Subscribe Now</button>
+                                    <input type="email" placeholder="demo@example.com" readonly>
+                                    <button class="submit-btn" type="submit" id="move"></button>
                                 </form>
                             </div>
                         </div>
@@ -546,9 +517,9 @@
                         <div class="col-auto mb-5">
                             <!-- Start Single Footer Info -->
                             <div class="footer-single-info">
-                                <a href="tel:+0123456789" class="info-box">
+                                <a href="tel:+923420057601" class="info-box">
                                     <span class="icon"><i class="icofont-phone"></i></span>
-                                    <span class="text">0123456789</span>
+                                    <span class="text"></span>
                                 </a>
                             </div>
                             <!-- Start Single Footer Info -->
@@ -556,9 +527,9 @@
                         <div class="col-auto mb-5">
                             <!-- Start Single Footer Info -->
                             <div class="footer-single-info">
-                                <a href="mailto:demo@example.com" class="info-box">
+                                <a href="mailto:ozzmanmuhammad@gmail.com" class="info-box">
                                     <span class="icon"><i class="icofont-envelope-open"></i></span>
-                                    <span class="text">demo@example.com</span>
+                                    <span class="text">ozzmanmuhammad@gmail.com</span>
                                 </a>
                             </div>
                             <!-- Start Single Footer Info -->
@@ -567,9 +538,9 @@
                             <!-- Start Single Footer Info -->
                             <div class="footer-single-info">
                                 <ul class="social-link">
-                                    <li><a href="https://www.example.com" target="_blank"><i class="icofont-facebook"></i></a></li>
-                                    <li><a href="https://www.example.com" target="_blank"><i class="icofont-dribbble"></i></a></li>
-                                    <li><a href="https://www.example.com" target="_blank"><i class="icofont-linkedin"></i></a></li>
+                                    <li><a href="tel:+923420057601" class="info-box"><i class="icofont-whatsapp"></i></a></li>
+                                    <li><a href="https://github.com/ozzmanmuhammad/" target="_blank"><i class="icofont-github"></i></a></li>
+                                    <li><a href="https://www.linkedin.com/in/usman-muhammad-7888b0205/" target="_blank"><i class="icofont-linkedin"></i></a></li>
                                 </ul>
                             </div>
                             <!-- Start Single Footer Info -->
@@ -582,13 +553,13 @@
                     <div class="row justify-content-center justify-content-md-between align-items-center flex-column-reverse flex-md-row">
                         <div class="col-auto">
                             <div class="footer-copyright">
-                                <p class="copyright-text">&copy; 2021 <a href="index.html">Lendex</a> Made with <i class="icofont-heart"></i> by <a href="https://hasthemes.com/" target="_blank">HasThemes</a> </p>
+                                <p class="copyright-text">&copy; 2022  Made with <i class="icofont-heart"></i> </p>
                             </div>
                         </div>
                         <div class="col-auto">
                             <a href="index.html" class="footer-logo">
                                 <div class="logo">
-                                    <img src="assets/images/logo/logo.png" alt="">
+                                    <h2>Portfolio.</h2>
                                 </div>
                             </a>
                         </div>
